@@ -1,0 +1,22 @@
+# Checking status
+docker --version
+docker ps
+docker ps -a
+docker images
+
+# Build and run
+docker build -t app0_image ./app0
+docker run -it --name app0_container app0_image
+
+# Removing docker container
+docker stop container_name
+docker rm container_name
+
+# Connecting to running container
+docker exec -it app0_container bash
+
+# Multiple container
+docker compose up
+docker compose up --build
+docker compose up --no-build
+docker compose down
